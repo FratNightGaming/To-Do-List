@@ -1,3 +1,7 @@
+# About
+
+A simple to-do list app with full CRUD functionality.
+
 # ToDoList
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 15.0.2.
