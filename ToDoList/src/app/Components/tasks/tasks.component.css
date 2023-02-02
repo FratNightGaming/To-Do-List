@@ -1,0 +1,11 @@
+.task{
+    display: flex;
+    padding: 10px 15px;
+    background-color: wheat;
+    border-bottom: 10px solid red;
+}
+
+.incomplete
+{
+    text-decoration: line-through;
+}

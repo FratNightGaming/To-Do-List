@@ -1,0 +1,8 @@
+<div class="tasks">
+    {{title}}
+    <div  *ngFor="let task of tasks; index as i;" [ngClass]="{incomplete: !task.completed}">
+        <div class="id">{{i}}</div>
+        <div class="content">{{task.task}}</div>
+        <button class="delete">Remove Task</button>
+    </div>
+</div>
