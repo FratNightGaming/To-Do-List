@@ -24,7 +24,7 @@
 
 .task .content{
     color: whitesmoke;
-    background: black;
+    background-color: black;
 }
 
 .task.done{
@@ -34,13 +34,14 @@
 .task-input{
     display: block;
     width: 100%;
-    padding: 10px 15px;
+    padding: 0px 0px;
     appearance: none;
     border: none;
     background-color: #f3f3f3;
     margin-top: 15px;
     font-size: 20px;
     outline: none;
+    text-align: center;
 }
 
 .task-submit{
