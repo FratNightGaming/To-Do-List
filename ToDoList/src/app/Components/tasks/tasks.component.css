@@ -1,11 +1,72 @@
+.tasks{
+    border: solid 10px blue;
+}
+
 .task{
     display: flex;
+    /* change display to flex... maybe */
     padding: 10px 15px;
     background-color: wheat;
     border-bottom: 10px solid red;
 }
 
-.incomplete
+.task:nth-child(even){
+    background-color: lightgreen;
+}
+
+.task:last-of-type{
+    border-bottom: 0px;
+}
+
+.task .id{
+    flex: 1 1 100px;
+}
+
+.task .content{
+    color: whitesmoke;
+    background: black;
+}
+
+.task.done{
+    text-decoration: double;
+}
+
+.task-input{
+    display: block;
+    width: 100%;
+    padding: 10px 15px;
+    appearance: none;
+    border: none;
+    background-color: #f3f3f3;
+    margin-top: 15px;
+    font-size: 20px;
+    outline: none;
+}
+
+.task-submit{
+    display: block;
+    width: 100%;
+    max-width: 200px;
+    appearance: none;
+    border: none;
+    outline: none;
+    background: none;
+
+    background-color: #fe4880;
+    color: #fff;
+    margin: 15px auto;
+
+    padding: 10px 15px;
+    font-size: 18px;
+    font-weight: 700;
+}
+
+.complete .content
 {
     text-decoration: line-through;
+}
+
+.incomplete .content
+{
+    text-decoration: none;
 }

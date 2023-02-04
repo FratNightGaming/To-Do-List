@@ -1,8 +1,15 @@
 <div class="tasks">
-    {{title}}
-    <div  *ngFor="let task of tasks; index as i;" [ngClass]="{incomplete: !task.completed}">
+    
+    <form (submit)="AddTask()">
+        <input type="text" name="inputTASK" placeholder="enter shithead" id="" class="task-input" [(ngModel)]="inputTask">
+        <input type="submit" value="COOKIE" class="task-submit">
+    </form>
+    
+    <h3 style="text-align: center;">{{title}}</h3>
+    <div class="task" *ngFor="let task of tasks; index as i;" [ngClass]="{complete: task.completed, incomplete: !task.completed}">
+        <!-- [ngClass]="{complete: task.completed} works too, but I wanted to show how to use multiple conditions using the ngClass directive-->
         <div class="id">{{i}}</div>
-        <div class="content">{{task.task}}</div>
-        <button class="delete">Remove Task</button>
+        <div class="content" (click)="ToggleComplete(task, 1)">{{task.task}}</div>
+        <button class="delete" (click)="DeleteTask(task)">Remove Task</button>
     </div>
 </div>
